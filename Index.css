@@ -1,0 +1,86 @@
+/* Pas de pooint quand cest un attribut */
+/* On met notre image en CSS on l'appelle comme le fichier, comme dans le html idem */
+
+body { 
+
+    background-image: url ('ballondore.jpg')
+
+}
+
+
+/* on met un point quand cest une putain de classe */
+.terraindefootball { 
+    
+    border-style: solid;
+    position : relative;
+    height : 150px;
+    width : 50%;
+    top : 50%;
+    left : 50%;
+    transform : translate (-50%, -50%);
+   
+}
+
+.surfacedereparationdegauche {
+    
+    border-style : solid;
+    height : 40%;
+    width : 30%;
+
+}
+
+.surfacedereparationdedroite {
+
+    border-style : solid;
+    height : ;
+    width : ;
+
+}
+
+.butdegauche {
+
+    border-style : solid;
+    border-color : pink;
+    height : ;
+    width : ;
+    bottom : ;
+
+}
+
+.butdedroite {
+
+    border-style : solid;
+    border-color : pink;
+    height : ;
+    width : ;
+    bottom : ;
+
+}
+
+
+.zonecentrale {
+
+    position : absolute ;
+    top : 50%;
+    left : 50%;
+    height : 25px;
+    width : 25px;
+    transform : translate(-50%, - 50%);
+}
+
+#moncercle {
+
+        border : pink ;
+        border-radius: 100%;
+        width : 160px;
+        height : 160px;
+        border : 2px solid pink; 
+
+      }
+
+.ballondefoot {
+
+    width : 50px ;
+    height : 50px ;
+
+}

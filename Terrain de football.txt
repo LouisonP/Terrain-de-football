@@ -1,0 +1,143 @@
+COURS TERRAIN DE FOOT
+
+postion
+div
+que des pourcentage
+
+
+
+Creation de dossier
+fichier html
+fichier css
+a ouvrir dans code
+
+base html5
+link sheet (pour le CSS)
+
+(Créer un dossier CSS si plusieurs feuilles de styles CSS)
+
+Faire un dossier IMG pour les images histoire de classer
+
+div par défaut fait 100 %, cest le contenant qui va faire qu'elle va s'adapter , cest fluide, sadapte grace au contenu 
+
+
+
+.terraindefootball { 
+    
+    border-style: solid;
+    position : relative;
+    height : 150px;
+    width : 50%;
+    top : 50%;
+    left : 50%;
+    transform : translate (-50%, -50%);
+
+    /*CENTRER DES ELEMENTS PARENTS ENFANTS*/
+   
+}
+
+    /*ON REPREND LA DIV CLASS DU HTML POUR LA METTRE EN HTML.*/
+
+.surfacedereparationdegauche {
+    
+    /*STYLDEBORDURE*/
+    border-style : solid;
+    /*HAUTEUR*/
+    height : 40%;
+    /*LARGEUR*/
+    width : 30%;
+
+}
+
+.surfacedereparationdedroite {
+
+    border-style : solid;
+    height : ;
+    width : ;
+    background-color: ;
+}
+
+.butdegauche {
+
+    border-style : solid;
+    border-color : pink;
+    height : ;
+    width : ;
+    bottom : ;
+
+}
+
+.butdedroite {
+
+}
+
+.zonecentrale {
+
+    /* z-index : 3 ; */
+    position : absolute ;
+    top : 50%;
+    left : 50%;
+    height : 25px;
+    width : 25px;
+    /* margin-top : ;
+    margin-left :  */
+    /*cest comme une margin masi on deplace lobjet, on le tire */
+    transform : translate(-12.5px -12.5px);
+    /* 25 divisé par deux pour le 12.5  */
+    transform : translate(-50%, - 50%);
+
+
+
+
+}
+
+.petitpoisdegauche {
+
+    height : ;
+    width: ;
+    background-color: ;
+    position: absolute;
+
+}
+
+.petitpoisdedroite {
+
+}
+
+.ballondefoot {
+
+    /*METTRE LE BALLON SUR LE FOND D'ECRAN*/
+    top: 40%;
+    position: absolute;
+    height: 10%;
+    width: 10%;
+
+}
+
+.lignedumilieu {
+
+    position : ;
+    height: ;
+    width: ;
+
+}
+
+.body, html {
+
+    margin: 0;
+    height : 100%;
+
+}
+
+
+      #moncercle{
+
+        border : pink ;
+        border-radius: 100%;
+        width : 160px;
+        height : 160px;
+        border : 2px solid pink; 
+
+      }
+
+utilisation des fleches pour bouger le ballon et barre despace pour envoyer la balle plus fort en javascript

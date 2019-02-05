@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="app.css">
+    <title>Document</title>
+</head>
+<body id="acc">
+    <div class="ligne1"> 
+        <div class="surf2">
+            <div class="point2" ></div>
+            <div class="six1"></div>
+            <div class="arc1"></div>
+        </div>
+        <div class="corner1" id="cor"></div>
+        <div class="corner2" id="cor"></div>
+    </div>
+    <div class="ligne2">
+        <div class="point3" ></div>
+        <div class="arc2"></div>
+        <div class="surf1">
+        <div class="six2"></div>
+        </div>
+        <div class="corner3" id="cor"></div>
+        <div class="corner4" id="cor"></div>
+    </div>
+    <div class="cercle1"></div>
+    <div class="ball"><img id="ballon" src="ball.png"></div>
+
+</body>
+    <script src="anim.js"></script>
+</html>
+body{
+    margin: 0;
+    padding: 0;
+    background-color: green;
+    width: 100%;
+}
+.ligne1, .ligne2{
+    position: absolute;
+    border-style: solid;
+    border-color: white;
+    height: 99.3vh;
+    width: 49.6%;
+}
+.ligne2{
+    margin-left: 49.9%;
+}
+.surf1, .surf2{
+    position: absolute;
+    border-style: solid;
+    border-color: white;
+    height: 60%;
+    width: 30%
+}
+.surf1{
+    right: 0%;
+    top: 20%;
+    border-right: none;
+}
+.surf2{
+    left: 25%;
+    top: 20%;
+    border-left: none;
+}
+.six1, .six2{
+    position: absolute;
+    border-style: solid;
+    border-color: white;
+    height: 15%;
+    width: 15%;
+    top : 50%;
+    transform: translateY(-50%);
+}
+.six1{
+    border-left: none;
+}
+.six2{
+    right: 0%;
+    border-right: 0%;
+}
+.cercle1{
+    position: absolute;
+    border-style: solid;
+    border-color: white;
+    height: 20%;
+    width: 12%;
+    border-radius: 50%;
+    margin-left: 43.8%;
+    top: 40%
+}
+.arc1{
+    position: absolute;
+    border-style: solid; 
+    border-color: white;
+    height: 20%;
+    width: 12%;
+    border-radius: 50%;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    left: 100%;
+    top: 40%
+}
+.arc2{
+    position: absolute;
+    border-style: solid;
+    border-color: white;
+    height: 20%;
+    width: 12%;
+    border-radius: 50%;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    top: 40%;
+    right: 24%
+}
+.point2, .point3 {
+    position: absolute;
+    width: 2%;
+    height: 2%;
+    background: white;
+    border-radius: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.point2{
+    left: 15%;
+}
+.point3{
+    right: 15%;
+}
+.corner1{
+    width: 50px;
+    height: 50px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 0 0 100px 0;
+    border-top: none;
+    border-left: none;
+}
+.corner2{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-color: white; 
+    border-style: solid;
+    border-radius: 0 100px 0 0;
+    bottom: 0%;
+    border-bottom: none;
+    border-left: none;
+}
+.corner3{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 0 0 0 100px;
+    right: 0%;
+    border-top: none;
+    border-right: none
+
+}
+.corner4{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 100px 0 0 0;
+    bottom: 0%;
+    right: 0%;
+    border-right: none;
+    border-bottom: none;
+}
+#ballon{
+    position: absolute;
+    width: 5%;
+    height: 8%;
+    left: 47.5%;
+    top: 41%;
+}
+var margeSpace = 2;
+var marginLeft = 1;
+var marginTop = 1;
+var marginBottom = 1;
+var vitesse = 3;
+window.onkeydown = function(e) {
+    var key = e.keyCode || e.which;
+    switch (key) {
+        case 37:
+        document.querySelector('#ballon').style.left = (marginLeft -= vitesse) + "%";
+        //-bouger gauche
+        break;
+        case 39:
+        document.querySelector("#ballon").style.left = (marginLeft += vitesse) +"%";
+//-b
+
+        break;
+    case 38:
+    document.querySelector("#ballon").style.top =(marginTop -= vitesse) +"%";
+        //-bouger haut
+        break;
+    case 40:
+    document.querySelector("#ballon").style.bottom =(marginBottom -= vitesse) +"%";
+        //-bouger bas
+        break;
+    default:
+        break;
+    }
+}
